@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="kwf.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg fixed top-0 z-50 w-full px-8"> 
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="kwf.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.home">หน้าแรก</a></li>
+                    <li><a href="service.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.services">บริการ</a></li>
+                    <li><a href="about.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.about">เกี่ยวกับเรา</a></li>
+                    <li><a href="contact.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.contact">ติดต่อ</a></li>
+                    <li>
+                        <a href="#" onclick="toggleLanguage(); return false;" class="text-base font-medium hover:text-primary">
+                            <span class="language-indicator">EN</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost normal-case text-2xl font-bold hover:bg-transparent hover:text-primary" data-lang-key="nav.brand">คิงเวลล์ เฟิร์ส</a>
+        </div>
+        <div class="navbar-end">
+            <ul class="menu menu-horizontal px-1 hidden lg:flex gap-2"> 
+                <li><a href="kwf.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.home">หน้าแรก</a></li>
+                <li><a href="service.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.services">บริการ</a></li>
+                <li><a href="about.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.about">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.contact">ติดต่อ</a></li>
+            </ul>
+            <button class="btn btn-ghost hover:bg-transparent px-4 ml-4" onclick="toggleLanguage()"> 
+                <span class="language-indicator text-lg font-semibold hover:text-primary transition-colors duration-300">EN</span>
+            </button>
+        </div>
+     </div>
+<br><br>
+     <!-- About-->
+    <section id="about" class="py-16 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="about.png" alt="เกี่ยวกับเรา" class="rounded-lg shadow-2xl" />
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6" data-lang-key="about.title">เกี่ยวกับเรา</h2>
+                    <div class="space-y-4">
+                        <p data-lang-key="about.description">บริษัท คิงเวลล์ เฟิร์ส จำกัด ก่อตั้งในปี 2545 เป็นผู้นำด้านการให้บริการห้องเย็นและแปรรูปอาหารที่ได้มาตรฐานระดับสากล</p>
+                        <p data-lang-key="about.certifications">เราภูมิใจที่ได้รับการรับรองมาตรฐานระดับโลก:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li data-lang-key="about.certificates.0">ISO 22000:2018 Food Safety Management</li>
+                            <li data-lang-key="about.certificates.1">FSSC 22000 Version 5.1</li>
+                            <li data-lang-key="about.certificates.2">GMP/HACCP Codex Alimentarius</li>
+                            <li data-lang-key="about.certificates.3">BRC Global Standard for Food Safety Issue 9</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map-->
+    <div class="mt-12 bg-base-100 rounded-2xl shadow-2xl overflow-hidden">
+        <div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/10">
+            <h3 class="text-2xl font-bold mb-4" data-lang-key="map.title">แผนที่และตำแหน่งที่ตั้ง</h3>
+            <div class="flex flex-wrap gap-4 mb-6">
+                <div class="badge badge-primary gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span data-lang-key="map.office">สำนักงานใหญ่</span>
+                </div>
+            </div>
+        </div>    
+        
+        <div class="map-container group">
+            <div class="relative">
+                <div class="absolute inset-0 bg-base-200 animate-pulse z-10 opacity-0 group-hover:opacity-0 transition-opacity pointer-events-none">
+                    </div>
+                </div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.480546047664!2d100.3104135!3d13.5674265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2b9af4dc42a49%3A0xf43a91708bed3683!2z4Lia4Lij4Li04Lip4Lix4LiXIOC4hOC4tOC4h-C5gOC4p-C4peC4peC5jCDguYDguJ_guLTguKPguYzguKog4LiI4Liz4LiB4Lix4LiUIEtpbmd3ZWxsIGZpcnN0IGNvLixsdGQ!5e0!3m2!1sen!2sth!4v1735108618270!5m2!1sen!2sth" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    class="z-0 transition-all duration-300 group-hover:brightness-105">
+                </iframe>
+                
+            </div>
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                            <span data-lang-key="map.office">สำนักงานใหญ่</span>
+                        </h3>
+                        <p class="text-sm opacity-75" data-lang-key="map2.address">66/8,66/19 หมู่ 3 ตำบลนาดี อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร  74000</p>
+                        <div class="flex gap-2 mt-2">
+                            <a href="tel:+6634-498535" class="btn btn-sm btn-outline btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span data-lang-key="map.buttons.call">โทร</span>
+                            </a>
+                            <button class="btn btn-sm btn-outline" onclick="copyAddress('head-office')">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                                </svg>
+                                <span data-lang-key="map.buttons.copy">คัดลอกที่อยู่</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Factory Card -->
+                <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                            <span data-lang-key="map.factory">โรงงาน</span>
+                        </h3>
+                        <p class="text-sm opacity-75" data-lang-key="map.address">318 หมู่ 5 ตำบลโคกขาม อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร 74000</p>
+                        <div class="flex gap-2 mt-2">
+                            <a href="tel:+6638123456" class="btn btn-sm btn-outline btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span data-lang-key="map.buttons.call">โทร</span>
+                            </a>
+                            <button class="btn btn-sm btn-outline" onclick="copyAddress('factory')">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                                </svg>
+                                <span data-lang-key="map.buttons.copy">คัดลอกที่อยู่</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<footer class="footer footer-center py-4 px-10 bg-base-200 text-base-content">
+    <div>
+      <p class="font-bold" data-lang-key="footer.company">บริษัท คิงเวลล์ เฟิร์ส จำกัด</p>
+      <p class="mb-1" data-lang-key="footer.tagline">ผู้นำด้านห้องเย็นและอาหารแปรรูป</p>
+      <p data-lang-key="footer.copyright">Copyright © 2024 - All rights reserved</p>
+    </div>  
+  </footer>
+    <script src="kwf.js"></script>
+    <script src="translate.js"></script>
+</body>
+</html>

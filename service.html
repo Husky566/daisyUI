@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="page.services.title">บริการแปรรูปอาหารทะเล | คิงเวลล์ เฟิร์ส</title>
+    <!-- Tailwind and DaisyUI -->
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="kwf.css">
+</head>
+<body>
+        <!-- Navbar -->
+        <div class="navbar bg-base-100 shadow-lg fixed top-0 z-50 w-full px-8"> 
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="kwf.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.home">หน้าแรก</a></li>
+                        <li><a href="service.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.services">บริการ</a></li>
+                        <li><a href="about.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.about">เกี่ยวกับเรา</a></li>
+                        <li><a href="contact.html" class="text-base font-medium hover:text-primary" data-lang-key="nav.contact">ติดต่อ</a></li>
+                        <li>
+                            <a href="#" onclick="toggleLanguage(); return false;" class="text-base font-medium hover:text-primary">
+                                <span class="language-indicator">EN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost normal-case text-2xl font-bold hover:bg-transparent hover:text-primary" data-lang-key="nav.brand">คิงเวลล์ เฟิร์ส</a>
+            </div>
+            <div class="navbar-end">
+                <ul class="menu menu-horizontal px-1 hidden lg:flex gap-2"> 
+                    <li><a href="kwf.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.home">หน้าแรก</a></li>
+                    <li><a href="service.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.services">บริการ</a></li>
+                    <li><a href="about.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.about">เกี่ยวกับเรา</a></li>
+                    <li><a href="contact.html" class="text-base font-medium hover:text-primary transition-colors duration-300" data-lang-key="nav.contact">ติดต่อ</a></li>
+                </ul>
+                <button class="btn btn-ghost hover:bg-transparent px-4 ml-4" onclick="toggleLanguage()"> 
+                    <span class="language-indicator text-lg font-semibold hover:text-primary transition-colors duration-300">EN</span>
+                </button>
+            </div>
+         </div>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Seafood Section -->
+        <section id="seafood" class="py-16 bg-gradient-to-b from-blue-50 to-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-6" data-lang-key="seafood.title">
+                    ความเป็นเลิศด้านการแปรรูปอาหารทะเล
+                </h2>
+                <p class="text-center text-lg mb-12 max-w-3xl mx-auto" data-lang-key="seafood.description">
+                    เรามีความเชี่ยวชาญในการแปรรูปอาหารทะเลคุณภาพสูง ด้วยเทคโนโลยีทันสมัยและมาตรฐานความปลอดภัยระดับสากล
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Sole Fish -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure class="px-4 pt-4">
+                            <img src="sole.png" alt="ปลาโซล แปรรูป" class="rounded-xl h-64 w-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <span data-lang-key="seafood.products.sole.title">ปลาโซลแปรรูป</span>
+                                <div class="badge badge-secondary" data-lang-key="seafood.products.sole.badge">พรีเมียม</div>
+                            </h3>
+                            <div class="space-y-2">
+                                <p data-lang-key="seafood.products.sole.description">ปลาโซลแปรรูปคุณภาพพรีเมียม</p>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li data-lang-key="seafood.products.sole.items.0">ปลาโซลแล่แช่แข็ง IQF</li>
+                                    <li data-lang-key="seafood.products.sole.items.1">เนื้อปลาโซลชุบเกล็ดขนมปัง</li>
+                                    <li data-lang-key="seafood.products.sole.items.2">ปลาโซลหั่นชิ้นพร้อมปรุง</li>
+                                </ul>
+                                <div class="text-sm mt-2">
+                                    <span class="font-semibold" data-lang-key="seafood.products.sole.capacity">
+                                        กำลังการผลิต: 1,000 ตัน/เดือน
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saba Fish -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure class="px-4 pt-4">
+                            <img src="saba.png" alt="ปลาซาบะ แปรรูป" class="rounded-xl h-64 w-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <span data-lang-key="seafood.products.saba.title">ปลาซาบะแปรรูป</span>
+                                <div class="badge badge-secondary" data-lang-key="seafood.products.saba.badge">พรีเมียม</div>
+                            </h3>
+                            <div class="space-y-2">
+                                <p data-lang-key="seafood.products.saba.description">ปลาซาบะแปรรูปคุณภาพสูง</p>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li data-lang-key="seafood.products.saba.items.0">ปลาซาบะแล่แช่แข็ง IQF</li>
+                                    <li data-lang-key="seafood.products.saba.items.1">ปลาซาบะย่างเกรดพรี</li>
+                                    <li data-lang-key="seafood.products.saba.items.2">ปลาซาบะชุบเกล็ดขนมปัง</li>
+                                </ul>
+                                <div class="text-sm mt-2">
+                                    <span class="font-semibold" data-lang-key="seafood.products.saba.capacity">
+                                        กำลังการผลิต: 800 ตัน/เดือน
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scallop -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure class="px-4 pt-4">
+                            <img src="shell.png" alt="หอยเชลล์ แปรรูป" class="rounded-xl h-64 w-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <span data-lang-key="seafood.products.shell.title">หอยเชลล์แปรรูป</span>
+                                <div class="badge badge-secondary" data-lang-key="seafood.products.scallop.badge">พรีเมียม</div>
+                            </h3>
+                            <div class="space-y-2">
+                                <p data-lang-key="seafood.products.shell.description">หอยเชลล์แปรรูปคุณภาพพรีเมียม</p>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li data-lang-key="seafood.products.shell.items.0">เนื้อหอยเชลล์แช่แข็ง IQF</li>
+                                    <li data-lang-key="seafood.products.shell.items.1">หอยเชลล์ครึ่งเปลือก</li>
+                                    <li data-lang-key="seafood.products.shell.items.2">หอยเชลล์พร้อมปรุง</li>
+                                </ul>
+                                <div class="text-sm mt-2">
+                                    <span class="font-semibold" data-lang-key="seafood.products.shell.capacity">
+                                        กำลังการผลิต: 500 ตัน/เดือน
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Modal -->
+    <dialog id="contact_modal" class="modal">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg" data-lang-key="modal.contact.title">ติดต่อสอบถาม</h3>
+            <form method="dialog" id="contactForm" class="py-4">
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text" data-lang-key="form.name">ชื่อ-นามสกุล</span>
+                    </label>
+                    <input type="text" class="input input-bordered w-full" required />
+                </div>
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text" data-lang-key="form.email">อีเมล</span>
+                    </label>
+                    <input type="email" class="input input-bordered w-full" required />
+                </div>
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text" data-lang-key="form.message">ข้อความ</span>
+                    </label>
+                    <textarea class="textarea textarea-bordered h-24" required></textarea>
+                </div>
+                <div class="modal-action">
+                    <button type="submit" class="btn btn-primary" data-lang-key="form.submit">ส่งข้อความ</button>
+                    <button type="button" class="btn" onclick="contact_modal.close()" data-lang-key="form.cancel">ยกเลิก</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+     <!-- Processing Standards -->
+     <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+        <h3 class="text-2xl font-bold mb-6 text-center" data-lang-key="standards.title">มาตรฐานการแปรรูป</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center space-y-2">
+                <div class="bg-blue-100 rounded-full p-4 mx-auto w-20 h-20 flex items-center justify-center">
+                    <span class="text-3xl">🌡️</span>
+                </div>
+                <h4 class="font-semibold" data-lang-key="standards.items.temperature.title">ควบคุมอุณหภูมิ</h4>
+                <p class="text-sm" data-lang-key="standards.items.temperature.description">ควบคุมอุณหภูมิตลอดกระบวนการผลิต -18°C ถึง -25°C</p>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="bg-blue-100 rounded-full p-4 mx-auto w-20 h-20 flex items-center justify-center">
+                    <span class="text-3xl">🔍</span>
+                </div>
+                <h4 class="font-semibold" data-lang-key="standards.items.quality.title">ตรวจสอบคุณภาพ</h4>
+                <p class="text-sm" data-lang-key="standards.items.quality.description">ตรวจสอบคุณภาพทุกขั้นตอนด้วยระบบ HACCP</p>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="bg-blue-100 rounded-full p-4 mx-auto w-20 h-20 flex items-center justify-center">
+                    <span class="text-3xl">📦</span>
+                </div>
+                <h4 class="font-semibold" data-lang-key="standards.items.iqf.title">เทคโนโลยี IQF</h4>
+                <p class="text-sm" data-lang-key="standards.items.iqf.description">แช่แข็งแบบ Individual Quick Freezing</p>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="bg-blue-100 rounded-full p-4 mx-auto w-20 h-20 flex items-center justify-center">
+                    <span class="text-3xl">🔬</span>
+                </div>
+                <h4 class="font-semibold" data-lang-key="standards.items.lab.title">ห้องปฏิบัติการ</h4>
+                <p class="text-sm" data-lang-key="standards.items.lab.description">ทดสอบคุณภาพในห้องปฏิบัติการที่ได้มาตรฐาน ISO/IEC 17025</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cold Storage -->
+        <div class="card bg-base-100 shadow-xl">
+            <figure><img src="cold.png" alt="ห้องเย็น" /></figure>
+            <div class="card-body">
+                <h2 class="card-title" data-lang-key="services.coldstorage.title">บริการห้องเย็น</h2>
+                <p data-lang-key="services.coldstorage.description">ให้บริการห้องเย็นที่ได้มาตรฐาน GMP และ HACCP พร้อมระบบควบคุมอุณหภูมิแบบ Real-time Monitoring</p>
+                <ul class="mt-4 space-y-2">
+                    <li data-lang-key="services.coldstorage.features.0">• ระบบควบคุมอุณหภูมิแม่นยำ -40°C ถึง +20°C</li>
+                    <li data-lang-key="services.coldstorage.features.1">• พื้นที่จัดเก็บรวมกว่า 50,000 ตารางเมตร</li>
+                    <li data-lang-key="services.coldstorage.features.2">• ระบบจัดการสินค้าคงคลัง WMS</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Food Processing -->
+        <div class="card bg-base-100 shadow-xl">
+            <figure><img src="fish.png" alt="แปรรูปอาหาร" /></figure>
+            <div class="card-body">
+                <h2 class="card-title" data-lang-key="services.processing.title">แปรรูปอาหาร</h2>
+                <p data-lang-key="services.processing.description">บริการแปรรูปอาหารด้วยเทคโนโลยีและมาตรฐานระดับโลก</p>
+                <ul class="mt-4 space-y-2">
+                    <li data-lang-key="services.processing.features.0">• แปรรูปผักและผลไม้ IQF</li>
+                    <li data-lang-key="services.processing.features.1">• ผลิตอาหารพร้อมทาน</li>
+                    <li data-lang-key="services.processing.features.2">• บรรจุภัณฑ์แบบ Modified Atmosphere</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Logistics -->
+        <div class="card bg-base-100 shadow-xl">
+            <figure><img src="asrs.png" alt="ASRS" /></figure>
+            <div class="card-body">
+                <h2 class="card-title" data-lang-key="services.logistics.title">ห้องเย็นระบบ ASRS</h2>
+                <p data-lang-key="services.logistics.description">ควบคุมอุณหภูมิที่ได้มาตรฐาน </p>
+                <ul class="mt-4 space-y-2">
+                    <li data-lang-key="services.logistics.features.0">• ระบบติดตาม สินค้า Real-time</li>
+                    <li data-lang-key="services.logistics.features.1">• ระบบอัตโนมัติ</li>
+                    <li data-lang-key="services.logistics.features.2">• บริการรวดเร็ว ไม่รอนาน</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer footer-center py-4 px-10 bg-base-200 text-base-content">
+    <div>
+      <p class="font-bold" data-lang-key="footer.company">บริษัท คิงเวลล์ เฟิร์ส จำกัด</p>
+      <p class="mb-1" data-lang-key="footer.tagline">ผู้นำด้านห้องเย็นและอาหารแปรรูป</p>
+      <p data-lang-key="footer.copyright">Copyright © 2024 - All rights reserved</p>
+    </div>  
+  </footer>
+    <script src="service.js"></script>
+    <script src="translate.js"></script>
+</body>
+</html>
